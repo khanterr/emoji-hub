@@ -13,6 +13,7 @@ export async function GET() {
 
     const data = await res.json();
     return NextResponse.json(data);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
